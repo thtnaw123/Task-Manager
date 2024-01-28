@@ -1,0 +1,26 @@
+<div class="unit-task">
+  <div class="task-name">
+    <div class="task-title-and-btn">
+      <h2>
+        {{ task.title }}
+      </h2>
+      <button class="expand-btn" (click)="handleExpand()">
+        @if(dropDescription){
+        <mat-icon> keyboard_arrow_up</mat-icon>
+        }@else {
+
+        <mat-icon>expand_more</mat-icon>
+        }
+      </button>
+    </div>
+
+    @if(dropDescription){
+
+    <h4>{{ task.description }}</h4>
+    }@else{ }
+  </div>
+  <div class="unit-task-btns">
+    <button>edit</button>
+    <button (click)="handleDelete()">delete</button>
+  </div>
+</div>

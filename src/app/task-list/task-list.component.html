@@ -1,0 +1,11 @@
+<div class="task-list">
+  @if (tasks.length >0){ @for (task of tasks; track task.title){
+  <app-unit-task
+    [task]="task"
+    (deleteEvent)="handleDeleteTask($event)"
+  ></app-unit-task>
+
+  } } @else{
+  <h3>no tasks here</h3>
+  }
+</div>

@@ -1,0 +1,22 @@
+<div class="add-task-container">
+  <div class="add-task-form">
+    <form action="" (ngSubmit)="handleSubmit()">
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="task.title"
+        placeholder="task title"
+      />
+      <br />
+      <input
+        type="text"
+        name="description"
+        [(ngModel)]="task.description"
+        placeholder="task description"
+      />
+      <br />
+      <button type="submit">add task</button>
+    </form>
+  </div>
+  <app-task-list [tasks]="tasks"></app-task-list>
+</div>

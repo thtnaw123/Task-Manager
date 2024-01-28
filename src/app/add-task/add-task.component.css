@@ -1,0 +1,29 @@
+.add-task-container {
+  text-align: center;
+}
+
+.add-task-form {
+  margin: 30px 0;
+}
+
+.add-task-form button {
+  margin: 0 10px;
+  padding: 5px 15px;
+  background: lightblue;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #000;
+  margin: 4px 15px;
+  border-radius: 4px;
+}
+
+.add-task-form input {
+  padding: 4px 15px;
+  margin: 4px 15px;
+}
+.task-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
