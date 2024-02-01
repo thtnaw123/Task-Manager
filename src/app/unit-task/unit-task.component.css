@@ -18,6 +18,10 @@
   margin: 0 5px;
 }
 
+.unit-task-btns input[type="checkbox"] {
+  padding: 5px 10px;
+}
+
 .expand-btn {
   background: none;
   outline: none;
@@ -29,4 +33,8 @@
 .task-title-and-btn {
   display: flex;
   align-items: center;
+}
+
+.completed-task {
+  text-decoration: line-through;
 }

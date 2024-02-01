@@ -1,0 +1,7 @@
+<div class="search-container">
+  <form action="">
+    <input type="text" placeholder="search tasks" #filter />
+    <button type="button" (click)="filterResults(filter.value)">Search</button>
+  </form>
+  <app-task-list [filterdTaskList]="filterdTaskList"></app-task-list>
+</div>

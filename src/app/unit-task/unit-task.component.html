@@ -1,7 +1,7 @@
 <div class="unit-task">
   <div class="task-name">
     <div class="task-title-and-btn">
-      <h2>
+      <h2 [class.completed-task]="task.completed">
         {{ task.title }}
       </h2>
       <button class="expand-btn" (click)="handleExpand()">
@@ -19,8 +19,14 @@
     <h4>{{ task.description }}</h4>
     }@else{ }
   </div>
+
   <div class="unit-task-btns">
-    <button>edit</button>
+    <input
+      type="checkbox"
+      [(ngModel)]="task.completed"
+      (change)="TaskListFromService.handleCheck(task.id)"
+    />
+    <button routerLink="/tasks/{{ task.id }}">edit</button>
     <button (click)="handleDelete()">delete</button>
   </div>
 </div>

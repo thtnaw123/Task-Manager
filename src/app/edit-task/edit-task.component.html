@@ -1,6 +1,6 @@
 <div class="add-task-container">
   <div class="add-task-form">
-    <form action="" (ngSubmit)="handleSubmit()">
+    <form action="" (ngSubmit)="handleSubmit(task.id)">
       <input
         type="text"
         name="title"
@@ -15,9 +15,7 @@
         placeholder="task description"
       />
       <br />
-      <button type="submit">add task</button>
+      <button type="submit">Update</button>
     </form>
   </div>
-
-  <h3 class="add-task-errorMessage">{{ errorMessage }}</h3>
 </div>

@@ -1,5 +1,6 @@
 <div class="task-list">
-  @if (tasks.length >0){ @for (task of tasks; track task.title){
+  @defer () { @if (filterdTaskList.length >0){ @for (task of filterdTaskList;
+  track task.title){
   <app-unit-task
     [task]="task"
     (deleteEvent)="handleDeleteTask($event)"
@@ -7,5 +8,7 @@
 
   } } @else{
   <h3>no tasks here</h3>
+  } }@loading(minimum 1s) {
+  <h1>loading...</h1>
   }
 </div>
